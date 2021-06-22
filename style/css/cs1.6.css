@@ -1,0 +1,99 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  margin-bottom: 3rem;
+}
+.content > h1 {
+  font-size: 28px;
+  margin-top: 6rem;
+}
+.content > h1::before {
+  width: 19ch !important;
+}
+.content > h1:nth-of-type(2) {
+  margin-top: 3rem;
+}
+.content > h1:nth-of-type(2)::before {
+  width: 27ch !important;
+}
+.content > .pricing {
+  margin: 2rem auto;
+  color: #000000;
+}
+.content > .pricing > .pricing-table {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  background-color: #ffffff;
+  transition: all 250ms ease-in-out;
+  border-radius: 3px;
+}
+.content > .pricing > .pricing-table > div {
+  position: relative;
+}
+.content > .pricing > .pricing-table > div > p {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+.content > .pricing > .pricing-table > .pricing-title {
+  background-color: #A216BB;
+  border-radius: 3px 3px 0 0;
+  color: #ffffff;
+  font-weight: 700;
+}
+.content > .pricing > .pricing-table > .rent {
+  background-color: #dbdbdb;
+}
+.content > .pricing > .pricing-table > .rent > p {
+  font-size: 20px !important;
+}
+.content > .pricing > .pricing-table:hover {
+  transform: scale(1.07);
+}
+.content > .button-holder {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.content > .button-holder > .button {
+  border: 2px #A216BB solid;
+  width: max-content;
+  cursor: pointer;
+  padding: 0.25em 0;
+  font-size: 1.25rem;
+  transition: all 250ms;
+  border-radius: 4px;
+}
+.content > .button-holder > .button:hover {
+  background-color: #A216BB;
+  transform: scale(1.05);
+}
+.content > .button-holder > .button > a {
+  text-decoration: none;
+  padding: 0.25em 1.1em;
+  color: #ffffff;
+}
+.content > .button-holder > .button > a:focus, .content > .button-holder > .button > a:visited, .content > .button-holder > .button > a:active {
+  color: #ffffff;
+}
+.content > .purchase {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+p {
+  text-align: center;
+  width: 100%;
+}
+p:first-of-type {
+  margin: 1rem 0;
+}
+p > .pink {
+  color: #A216BB;
+}
+
+/*# sourceMappingURL=cs1.6.css.map */

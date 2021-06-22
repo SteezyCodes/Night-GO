@@ -1,0 +1,155 @@
+@import "variables";
+
+.content {
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 768px;
+    min-height: 600px;
+    margin: calc(110px + 50px) auto 3rem;
+    position: relative;
+    .cart {
+        display: flex;
+        width: 100%;
+        margin-top: 80px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        i {
+            font-size: 4rem;
+            &:hover {
+                animation: asd 500ms infinite linear;
+            }
+        }
+        span {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            a {
+                color: $white;
+                text-decoration: none;
+                &:focus,
+                &:visited,
+                &:active {
+                    color: $gold !important;
+                }
+                .gold {
+                    color: $gold !important;
+                }
+            }
+        }
+    }
+    .pick-game {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: row;
+        margin: 2rem 0 3rem;
+        width: 100%;
+        grid-gap: 4rem 2rem;
+        justify-content: space-around;
+        .game {
+            border: 3px solid $accent;
+            border-radius: 6px;
+            cursor: pointer;
+            position: relative;
+            p {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                text-align: center;
+                font-size: 2.5rem;
+                font-weight: 700;
+                z-index: 3;
+                pointer-events: none;
+                color: $white;
+                transform: translate(-50%,-50%);
+                &:hover {
+                    color: $white !important;
+                    opacity: 1 !important;
+                }
+            }
+            .opacity {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transition: all 250ms ease-in-out;
+                background-color: transparent;
+                z-index: 2;
+                left: 0;
+                top: 0;
+                &::before {
+                    display: none;
+                }
+                &:hover {
+                    background-color: $black;
+                }
+            }
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                transition: all 250ms ease-in-out;
+                object-fit: cover;
+                opacity: .7;
+                object-position: center center;
+            }
+            :hover, .opacity {
+                opacity: .3;
+            }
+            div {
+                position: absolute;
+                font-size: 1.5rem;
+                font-weight: 100;
+                left: 50%;
+                transform: translate(-50%, 16px);
+                &::before {
+                    background-color: $green;
+                    content: "";
+                    border-radius: 50%;
+                    height: 15px;
+                    left: -20px;
+                    transform: translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    width: 15px;
+                }
+            }
+            .online {
+                opacity: 1 !important;
+            }
+            .offline {
+                &:hover {
+                    opacity: 1 !important;
+                }
+                &::before {
+                    background-color: $red;
+                }
+            }
+        }
+    }
+}
+
+@keyframes asd {
+    0% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+    30% {
+        transform: scale(1.1) rotate(0deg);
+    }
+    60% {
+        transform: scale(1.1) rotate(45deg);
+    }
+    100% {
+        transform: scale(1.1) rotate(0deg);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .content {
+        margin-top: 1rem;
+        .pick-game {
+            .game {
+                p {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+.note {
+  display: flex;
+}
+.note .content {
+  box-shadow: 0px 5px 10px 1px #000000;
+  background-color: #3c3c3c;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 3rem;
+  width: 100%;
+  min-height: 600px;
+  max-width: 768px;
+  margin: calc(110px + 120px) auto 3rem;
+  position: relative;
+}
+.note .content::before {
+  width: 100%;
+  position: absolute;
+  content: "";
+  height: 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #A216BB;
+  left: 0;
+  transform: translate(0, calc(-50% - 16px));
+}
+.note .content > h1 {
+  font-size: 3rem;
+  margin: 4rem 0 1rem;
+  position: relative;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.note .content > h1:nth-of-type(2)::before {
+  width: 13ch;
+}
+.note .content > h1::before {
+  content: "";
+  position: absolute;
+  width: 10ch;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+  background-color: #222222;
+}
+.note .content > h1::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 70%;
+  height: 3px;
+  background-color: #ffffff;
+  content: "";
+  z-index: -1;
+  position: absolute;
+}
+.note .content > a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 3rem 0 0 0;
+  display: flex;
+  align-self: center;
+  font-size: 1.25rem;
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  transition: 250ms all ease-in-out;
+}
+.note .content > a:hover {
+  background-color: #ffffff;
+  color: #222222;
+}
+.note .content > p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.note .content > p > code {
+  background-color: #474747;
+  padding: 0.125em 0.5em;
+  border-radius: 4px;
+}
+.note .content > p:first-of-type {
+  margin: 1rem 0;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.note .content > p:nth-of-type(2) {
+  margin: 2rem 0 1rem;
+}
+.note .content > p > .gold {
+  color: #dfe94e !important;
+}
+.note .content > p > a {
+  color: #A216BB;
+  text-decoration: none;
+}
+.note .content > p > a:focus, .note .content > p > a:visited, .note .content > p > a:active {
+  color: #A216BB;
+}
+.note .content > p:last-of-type {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+.note .content > .support {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+.note .content > .support > span {
+  font-size: 1.2rem;
+  width: 15%;
+}
+.note .content > .support > a {
+  font-size: 1.2rem;
+  text-align: left;
+  color: #A216BB;
+  width: 33%;
+  text-decoration: none;
+}
+.note .content > .support > a:focus, .note .content > .support > a:visited, .note .content > .support > a:active {
+  color: #A216BB;
+}
+.note .content > .support > div {
+  width: 33%;
+  display: flex;
+}
+.note .content > .support > div:nth-of-type(1) {
+  justify-content: right;
+}
+.note .content > .support > div:nth-of-type(2) {
+  justify-content: left;
+}
+.note .content > .support > div > .button {
+  border: 2px #A216BB solid;
+  width: max-content;
+  cursor: pointer;
+  padding: 0.25em 0;
+  transition: all 250ms;
+  border-radius: 4px;
+}
+.note .content > .support > div > .button:hover {
+  background-color: #A216BB;
+  transform: scale(1.05);
+}
+.note .content > .support > div > .button > a {
+  text-decoration: none;
+  padding: 0.25em 1.1em;
+  color: #ffffff;
+}
+.note .content > .support > div > .button > a:focus, .note .content > .support > div > .button > a:visited, .note .content > .support > div > .button > a:active {
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  .note {
+    margin: 2rem auto 3rem;
+    width: 90%;
+  }
+  .note .content {
+    margin: 1rem auto 0;
+    padding: 1rem 0.5rem 3rem;
+  }
+  .note .content > p:last-of-type, .note .content > p:first-of-type {
+    font-size: 20px !important;
+  }
+
+  .support {
+    padding: 0 2rem !important;
+  }
+  .support div {
+    justify-content: center !important;
+  }
+  .support span {
+    width: 34% !important;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

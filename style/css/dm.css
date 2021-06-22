@@ -1,0 +1,7 @@
+.content .container .top {
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  grid-gap: 6rem !important;
+}
+
+/*# sourceMappingURL=dm.css.map */

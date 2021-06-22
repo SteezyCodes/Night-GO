@@ -1,0 +1,98 @@
+@import "variables";
+
+.content {
+    display: flex;
+    margin-bottom: 3rem;
+    min-height: 600px;
+    flex-direction: column;
+    & > h1 {
+        font-size: 28px;
+        margin-top: 6rem;
+        &::before {
+            width: 27ch !important;
+        }
+        &:nth-of-type(2) {
+            margin-top: 3rem;
+        }
+    }
+    & > .pricing {
+        margin: 2rem auto;
+        color: $black;
+        & > .pricing-table {
+            width: 330px;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            background-color: $white;
+            transition: all 250ms ease-in-out;
+            border-radius: 3px;
+            & > div {
+                position: relative;
+                & > p {
+                    padding: 1rem;
+                    text-align: center;
+                    font-size: 1.25rem;
+                }
+            }
+            & > .pricing-title {
+                background-color: $accent;
+                border-radius: 3px 3px 0 0;
+                color: $white;
+                font-weight: 700;
+            }
+            & > .rent {
+                background-color: $grey;
+                & > p {
+                    font-size: 20px !important;
+                }
+            }
+            &:hover {
+                transform: scale(1.07);
+            }
+        }
+    }
+    & > .button-holder {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        & > .button {
+            border: 2px $accent solid;
+            width: max-content;
+            cursor: pointer;
+            padding: .25em 0;
+            font-size: 1.25rem;
+            transition: all 250ms;
+            border-radius: 4px;
+            &:hover {
+                background-color: $accent;
+                transform: scale(1.05);
+            }
+            & > a {
+                text-decoration: none;
+                padding: .25em 1.1em;
+                color: $white;
+                &:focus,
+                &:visited,
+                &:active {
+                    color: $white;
+                }
+            }
+        }
+    }
+    & > .purchase {
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+}
+
+p {
+    &:first-of-type {
+        margin: 1rem 0;
+    }
+    text-align: center;
+    width: 100%;
+    & > .pink {
+        color: $accent;
+    }
+}

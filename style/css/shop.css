@@ -1,0 +1,147 @@
+.content {
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 768px;
+  min-height: 600px;
+  margin: calc(110px + 50px) auto 3rem;
+  position: relative;
+}
+.content .cart {
+  display: flex;
+  width: 100%;
+  margin-top: 80px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.content .cart i {
+  font-size: 4rem;
+}
+.content .cart i:hover {
+  animation: asd 500ms infinite linear;
+}
+.content .cart span {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.content .cart span a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.content .cart span a:focus, .content .cart span a:visited, .content .cart span a:active {
+  color: #dfe94e !important;
+}
+.content .cart span a .gold {
+  color: #dfe94e !important;
+}
+.content .pick-game {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: row;
+  margin: 2rem 0 3rem;
+  width: 100%;
+  grid-gap: 4rem 2rem;
+  justify-content: space-around;
+}
+.content .pick-game .game {
+  border: 3px solid #A216BB;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+.content .pick-game .game p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  z-index: 3;
+  pointer-events: none;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.content .pick-game .game p:hover {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.content .pick-game .game .opacity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 250ms ease-in-out;
+  background-color: transparent;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+.content .pick-game .game .opacity::before {
+  display: none;
+}
+.content .pick-game .game .opacity:hover {
+  background-color: #000000;
+}
+.content .pick-game .game img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 250ms ease-in-out;
+  object-fit: cover;
+  opacity: 0.7;
+  object-position: center center;
+}
+.content .pick-game .game :hover, .content .pick-game .game .opacity {
+  opacity: 0.3;
+}
+.content .pick-game .game div {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 100;
+  left: 50%;
+  transform: translate(-50%, 16px);
+}
+.content .pick-game .game div::before {
+  background-color: #76c893;
+  content: "";
+  border-radius: 50%;
+  height: 15px;
+  left: -20px;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  width: 15px;
+}
+.content .pick-game .game .online {
+  opacity: 1 !important;
+}
+.content .pick-game .game .offline:hover {
+  opacity: 1 !important;
+}
+.content .pick-game .game .offline::before {
+  background-color: #ef233c;
+}
+
+@keyframes asd {
+  0% {
+    transform: scale(1.1) rotate(-45deg);
+  }
+  30% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(45deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(0deg);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content {
+    margin-top: 1rem;
+  }
+  .content .pick-game .game p {
+    font-size: 1.75rem;
+  }
+}
+
+/*# sourceMappingURL=shop.css.map */
