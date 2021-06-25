@@ -48,6 +48,10 @@
   position: absolute;
 }
 
+body {
+  width: 100vw;
+}
+
 .content {
   min-height: 4800px;
   display: flex;
@@ -587,6 +591,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .thin::after {
     display: none;
   }
