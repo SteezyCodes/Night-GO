@@ -592,7 +592,7 @@
     width: 100vw;
   }
 
-  .thin::after {
+  .thin::before, .thin::after {
     display: none;
   }
 

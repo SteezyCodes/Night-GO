@@ -640,6 +640,7 @@
         width: 100vw;
     }
     .thin {
+        &::before,
         &::after {
             display: none;
         }
