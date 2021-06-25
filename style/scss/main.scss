@@ -63,10 +63,6 @@
     }
 }
 
-body {
-    width: 100vw;
-}
-
 .content {
     min-height: 4800px;
     display: flex;
@@ -641,6 +637,7 @@ body {
 @media only screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
+        width: 100vw;
     }
     .thin {
         &::after {
