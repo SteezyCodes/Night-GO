@@ -635,6 +635,11 @@
     }
 }
 @media only screen and (max-width: 768px) {
+    .thin {
+        &::after {
+            display: none;
+        }
+    }
     .content {
         flex-direction: column;
         padding: 0 1rem;
@@ -687,6 +692,9 @@
                     }
                 }
                 .event {
+                    .warning {
+                        width: auto;
+                    }
                     .event-body {
                         .event-info {
                             width: auto;
