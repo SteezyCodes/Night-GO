@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://night-go.com",
   "scripts": {
     "scss": "sass style/scss:style/css --watch"
   },
