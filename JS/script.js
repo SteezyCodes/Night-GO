@@ -1,10 +1,10 @@
-let discordIconWrapper = document.querySelector(".discord-holder");
 let timeoutID = null;
-let left = document.querySelector(".left");
-let arrow = document.querySelector(".arrow");
-let right = document.querySelector(".right");
-let blogBody = document.querySelectorAll(".blog-body");
-let blogs = document.querySelectorAll(".blogs");
+const discordIconWrapper = document.querySelector(".discord-holder");
+const left = document.querySelector(".left");
+const arrow = document.querySelector(".arrow");
+const right = document.querySelector(".right");
+const blogBody = document.querySelectorAll(".blog-body");
+const blogs = document.querySelectorAll(".blogs");
 
 //copyright
 
@@ -152,55 +152,53 @@ let processHover = (data) => {
     let plushpValue = data.plushp;
     let rundaValue = data.runda;
     let kosaValue = data.kosa;
-    jd(userBar, userValue);
-    jd(gbBar, gbValue);
-    jd(projectBar, projectValue);
-    jd(kevdef, kevdefValue);
-    jd(hsplushp, hsplushpValue);
-    jd(cash, cashValue);
-    jd(czk, czkValue);
-    jd(czh, czhValue);
-    jd(bomb, bombValue);
-    jd(plushp, plushpValue);
-    jd(runda, rundaValue);
-    jd(kosa, kosaValue);
+    percentage(userBar, userValue);
+    percentage(gbBar, gbValue);
+    percentage(projectBar, projectValue);
+    percentage(kevdef, kevdefValue);
+    percentage(hsplushp, hsplushpValue);
+    percentage(cash, cashValue);
+    percentage(czk, czkValue);
+    percentage(czh, czhValue);
+    percentage(bomb, bombValue);
+    percentage(plushp, plushpValue);
+    percentage(runda, rundaValue);
+    percentage(kosa, kosaValue);
 }
 
 let processReset = () => {
     if (selected === true) {
-        jd(userBar, mainData[selectedIndex].users);
-        jd(gbBar, mainData[selectedIndex].gb);
-        jd(projectBar, mainData[selectedIndex].projects);
-        jd(kevdef, mainData[selectedIndex].kevdef);
-        jd(plushp, mainData[selectedIndex].plushp);
-        jd(cash, mainData[selectedIndex].cash);
-        jd(czk, mainData[selectedIndex].czk);
-        jd(czh, mainData[selectedIndex].czh);
-        jd(bomb, mainData[selectedIndex].bomb);
-        jd(hsplushp, mainData[selectedIndex].hsplushp);
-        jd(runda, mainData[selectedIndex].runda);
-        jd(kosa, mainData[selectedIndex].kosa);
+        percentage(userBar, mainData[selectedIndex].users);
+        percentage(gbBar, mainData[selectedIndex].gb);
+        percentage(projectBar, mainData[selectedIndex].projects);
+        percentage(kevdef, mainData[selectedIndex].kevdef);
+        percentage(plushp, mainData[selectedIndex].plushp);
+        percentage(cash, mainData[selectedIndex].cash);
+        percentage(czk, mainData[selectedIndex].czk);
+        percentage(czh, mainData[selectedIndex].czh);
+        percentage(bomb, mainData[selectedIndex].bomb);
+        percentage(hsplushp, mainData[selectedIndex].hsplushp);
+        percentage(runda, mainData[selectedIndex].runda);
+        percentage(kosa, mainData[selectedIndex].kosa);
         return;
     };
-    jd(userBar, 0);
-    jd(gbBar, 0);
-    jd(projectBar, 0);
-    jd(kevdef, 0);
-    jd(hsplushp, 0);
-    jd(cash, 0);
-    jd(czk, 0);
-    jd(czh, 0);
-    jd(bomb, 0);
-    jd(plushp, 0);
-    jd(runda, 0);
-    jd(kosa, 0);
+    percentage(userBar, 0);
+    percentage(gbBar, 0);
+    percentage(projectBar, 0);
+    percentage(kevdef, 0);
+    percentage(hsplushp, 0);
+    percentage(cash, 0);
+    percentage(czk, 0);
+    percentage(czh, 0);
+    percentage(bomb, 0);
+    percentage(plushp, 0);
+    percentage(runda, 0);
+    percentage(kosa, 0);
 }
 
-let jd = (bar, value) => {
+let percentage = (bar, value) => {
     bar.style.width = value + "%";
 }
-
-//BÓG JSA OTWIERANE I ZAMYKANE MENU
 
 let clicked = true;
 
@@ -226,7 +224,6 @@ arrow.addEventListener('click', ()=> {
 
 })    
 
-//COS Z NETA ZATRZYMUJACE FIXED SCROLL
 
 var socialFloat = document.querySelector('.left');
 var footer = document.querySelector('.footer');
@@ -282,9 +279,3 @@ scrollMainPage.addEventListener('click', () => {
 scrollNews.addEventListener('click', () => {
     newsSection.scrollIntoView({behavior:'smooth', block:'start'})
 })
-
-//zabawne
-
-// document.querySelectorAll("body *").forEach((el)=>{
-//     el.style.setProperty("animation-duration", Math.random()*10000 + "ms")
-// })
